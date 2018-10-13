@@ -14,7 +14,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        {this.state.title} {this.state.counterValue}<button onClick={() => this.setState({ counterValue: 1 })}>Increment</button>
+       <h1>Start Homework</h1>
      
       </div>
       
