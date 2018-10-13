@@ -50,7 +50,7 @@ class App extends Component {
                   {
                     task.isImportant ?
                       <span>&#9733;</span> :
-                      <span onClick={this.handleMakeTaskImportant}>&#9734;</span>
+                      <span onClick={() => this.makeTaskImportant(task.id)}>&#9734;</span>
                   }
                   {
                     task.isDone ? <del>{task.title}</del> : task.title
