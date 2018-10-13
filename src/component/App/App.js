@@ -30,9 +30,11 @@ class App extends Component {
         <ul>
           {tasks.map(task => (
             <li key={task.id}>
-            {
-              task.isDone ? <del>{task.title}</del> : task.title
-            }
+              {
+                task.isImportant && <span>&#9734;</span>
+              }
+
+              {task.isDone ? <del>{task.title}</del> : task.title}
             </li>
           ))}
         </ul>
