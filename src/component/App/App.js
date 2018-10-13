@@ -36,7 +36,9 @@ class App extends Component {
           {
             tasks.map(
               task => (
-                <li>{task.title}</li>
+                <li key={task.id}>
+                <del>{task.title}</del>
+                </li>
               )
             )
           }
