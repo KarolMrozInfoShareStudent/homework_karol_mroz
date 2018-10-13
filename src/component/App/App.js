@@ -36,6 +36,16 @@ class App extends Component {
       )
     })
   }
+  makeTaskUnimportant = taskId => {
+    this.setState({
+      tasks: this.state.tasks.map(
+        task => taskId !== task.id ? task : {
+          ...task,
+          isImportant: false
+        }
+      )
+    })
+  }
 
   render() {
     return (
@@ -49,7 +59,7 @@ class App extends Component {
                 <li key={task.id}>
                   {
                     task.isImportant ?
-                      <span>&#9733;</span> :
+                      <span onClick={() => this.makeTaskUnimportant(task.id)}>&#9733;</span> :
                       <span onClick={() => this.makeTaskImportant(task.id)}>&#9734;</span>
                   }
                   {
