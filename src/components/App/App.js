@@ -42,6 +42,17 @@ class App extends Component {
     })
   }
 
+  EditTask = taskId =>{
+    this.setState({
+      previousState: this.state,
+      tasks: this.state.tasks.map({
+       
+       
+       
+      })
+    })
+  }
+
   handleUndo = () => {
     this.setState(this.state.previousState)
   }
@@ -79,6 +90,7 @@ class App extends Component {
                   }
                   <button onClick={() => this.toggleTaskDone(task.id)}>Ważny</button>
                   <button onClick={() => this.removeTask(task.id)}>Usuń Kontakt</button>
+                  <button onClick={() => this.EditTask(task.id)}>Edytuj Kontakt</button>
                   {
                     task.isImportant ?
                       <span className="important" onClick={() => this.toggleTaskImportant(task.id)}>&#9733;</span> :
