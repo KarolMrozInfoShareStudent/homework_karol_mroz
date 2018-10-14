@@ -33,7 +33,7 @@ class AddTaskForm extends Component {
           this.state.error && <p>{this.state.error.message}</p>
         }
         <input value={this.state.taskTitle} onChange={this.handleChange}/>
-        <button>Add</button>
+        <button>Dodaj Kontakt</button>
       </form>
     )
   }
