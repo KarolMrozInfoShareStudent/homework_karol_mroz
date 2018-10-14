@@ -75,9 +75,9 @@ class App extends Component {
                 <li key={task.id}>
                   
                   {
-                    task.isDone ? <u>{task.title}</u> : task.title
+                    task.isDone ? <u className="Red">{task.title}</u> : task.title
                   }
-                  <button onClick={() => this.toggleTaskDone(task.id)}>podkreśl</button>
+                  <button onClick={() => this.toggleTaskDone(task.id)}>Ważny</button>
                   <button onClick={() => this.removeTask(task.id)}>Usuń Kontakt</button>
                   {
                     task.isImportant ?
