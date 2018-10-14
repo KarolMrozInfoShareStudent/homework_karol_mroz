@@ -81,8 +81,8 @@ class App extends Component {
                   <button onClick={() => this.removeTask(task.id)}>Usuń Kontakt</button>
                   {
                     task.isImportant ?
-                      <span onClick={() => this.toggleTaskImportant(task.id)}>&#9733;</span> :
-                      <span onClick={() => this.toggleTaskImportant(task.id)}>&#9734;</span>
+                      <span className="important" onClick={() => this.toggleTaskImportant(task.id)}>&#9733;</span> :
+                      <span className="noImportant" onClick={() => this.toggleTaskImportant(task.id)}>&#9734;</span>
                   }
                 </li>
               )

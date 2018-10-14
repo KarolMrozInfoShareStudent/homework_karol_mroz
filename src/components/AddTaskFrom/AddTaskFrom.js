@@ -11,7 +11,7 @@ class AddTaskForm extends Component {
     event.preventDefault()
     if (this.state.taskTitle === '') {
       this.setState({
-        error: new Error('Sorry we need task title to make it work')
+        error: new Error('dodaj kontakt !')
       })
       return;
     }

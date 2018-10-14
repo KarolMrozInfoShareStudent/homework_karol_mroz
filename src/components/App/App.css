@@ -6,4 +6,19 @@
 }
 
 
+li{
+  font-size: 40px;
+}
+
 .Red {color: red}
+
+
+.important{
+  font-size: 40px;
+  color: orange
+}
+
+
+.noImportant{
+  font-size: 40px;
+}
